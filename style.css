@@ -1,0 +1,256 @@
+:root {
+    --bg-color: #0f172a;
+    --text-color: #e2e8f0;
+    --accent-color: #38bdf8;
+    --card-bg: #1e293b;
+    --border-color: #334155;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+/* Навигация */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Главный экран */
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 60vh;
+    padding-top: 100px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--accent-color);
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+    color: #94a3b8;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #0f172a;
+    padding: 12px 28px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Секции общие */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    border-left: 4px solid var(--accent-color);
+    padding-left: 15px;
+}
+
+/* Сетка навыков */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background-color: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.skill-card h3 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+/* Стили для списков навыков */
+.skill-list {
+    list-style: none;
+    margin-top: 15px;
+}
+
+.skill-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    color: #94a3b8;
+}
+
+/* Красивый кастомный маркер списка */
+.skill-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* Портфолио */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-info {
+    padding: 25px;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: #94a3b8;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.project-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Новые стили для контактов без формы */
+.contact-wrapper {
+    max-width: 600px;
+}
+
+.contact-text {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+.contact-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-list li {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-list .icon {
+    margin-right: 12px;
+    font-size: 1.4rem;
+}
+
+.contact-link-item {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin-left: 8px;
+    border-bottom: 1px dashed transparent;
+    transition: border-color 0.3s, opacity 0.3s;
+}
+
+.contact-link-item:hover {
+    border-color: var(--accent-color);
+    opacity: 0.9;
+}
+
+/* Футер */
+.footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid var(--border-color);
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* Мобильная адаптивность */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Для простоты скрываем меню на мобильных */
+    .hero-text h1 { font-size: 2.5rem; }
+}

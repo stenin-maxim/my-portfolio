@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио Web-Разработчика</title>
+    <link rel="shortcut icon" type="image/x-icon" href="tag.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка / Навигация -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">&lt;Dev/&gt;</a>
+            <ul class="nav-links">
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Главный экран (Hero) -->
+    <section class="hero container" id="about">
+        <div class="hero-text">
+            <h1>Привет, я <span class="highlight">Стенин Максим</span></h1>
+            <p>Разработчик. Создаю быстрые, надежные и современные веб-приложения. Специализируюсь на Java, JavaScript, PHP, Python и проектировании баз данных.</p>
+            <a href="#contact" class="btn">Связаться со мной</a>
+        </div>
+    </section>
+
+    <!-- Секция: Навыки (Skills) -->
+    <section class="skills container" id="skills">
+        <h2 class="section-title">Мой стек технологий</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Backend</h3>
+                <ul class="skill-list">
+                    <li>Java (Spring Boot)</li>
+                    <li>PHP (Laravel)</li>
+                    <li>Python</li>
+                    <li>REST API</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Frontend</h3>
+                <ul class="skill-list">
+                    <li>JavaScript (ES6+) / TypeScript</li>
+                    <li>React / Redux Toolkit</li>
+                    <li>HTML5 / CSS3 (SCSS)</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Базы данных</h3>
+                <ul class="skill-list">
+                    <li>MySQL</li>
+                    <li>PostgreSQL</li>
+                    <li>Redis</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Инструменты</h3>
+                <ul class="skill-list">
+                    <li>Git / Docker</li>
+                    <li>Linux (Debian/Ubuntu)</li>
+                    <li>Nginx / Apache</li>
+                    <li>Postman / Jira</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция: Портфолио (Portfolio) -->
+    <section class="portfolio container" id="portfolio">
+        <h2 class="section-title">Выполненные проекты</h2>
+        <div class="portfolio-grid">
+            <!-- Проект 1 -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Полнофункциональная платформа «Доска объявлений»</h3>
+                    <p>Спроектировал и реализовал архитектуру приложения с нуля.
+                    Разработал и интегрировал систему чата между пользователями, обеспечив мгновенную доставку сообщений без перезагрузки страниц.</p>
+                    <p>Спроектировал гибкую систему фильтрации и поиска товаров.</p>
+                    <a href="https://doskaup.ru" class="project-link" target="_blank">Сайт →</a>
+                </div>
+            </div>
+            <!-- Проект 2 -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Экосистема умного дома (IoT)</h3>
+                    <p>Разработал решение для IoT-экосистемы: от проектирования серверной архитектуры до реализации кроссплатформенного мобильного приложения</p>
+                    <p>Спроектировал и внедрил систему real-time обмена данными между датчиками и интерфейсом пользователя на базе WebSockets и протокола MQTT.</p>
+                    <a href="https://github.com/stenin-maxim/Inteli/tree/dev" class="project-link" target="_blank">Смотреть Git →</a>
+                </div>
+            </div>
+            <!-- Проект 3 -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Веб-платформа B2C</h3>
+                    <p>Разработал масштабируемый REST API, обеспечивший бесперебойную работу клиентского приложения.</p>
+                    <p>Спроектировал архитектуру БД с нуля, реализовав эффективную схему связей и систему индексов для работы с большими объемами данных.</p>
+                    <a href="https://bitbucket.org/stenin-maxim/love/src/dev/" class="project-link" target="_blank">Смотреть Git →</a>
+                </div>
+            </div>
+            <!-- Проект 4 -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>CRM-система учета и логистики отходов</h3>
+                    <p>Разработка серверной части приложения.</p>
+                    <p>Реализовал серверную логику и систему разграничения прав доступа (RBAC) для типов контрагентов и сотрудников.</p>
+                    <a href="https://github.com/stenin-maxim/php/tree/dev" class="project-link" target="_blank">Смотреть Git →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция: Контакты (Contact) -->
+    <section class="contact container" id="contact">
+        <h2 class="section-title">Связаться со мной</h2>
+        <div class="contact-wrapper">
+            <p class="contact-text">Ищете опытного разработчика для усиления команды или реализации проекта? Напишите мне в удобное для вас время. Я всегда открыт для предложений.</p>
+            <ul class="contact-list">
+                <li>
+                    <span class="icon">📱</span> Telegram: 
+                    <a href="https://t.me" target="_blank" class="contact-link-item">@stn_maxim</a>
+                </li>
+                <li>
+                    <span class="icon">📧</span> Email: 
+                    <a href="mailto:blueeulb@yandex.ru" class="contact-link-item">blueeulb@yandex.ru</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <p>&copy; 2026. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
