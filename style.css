@@ -13,6 +13,11 @@
     scroll-behavior: smooth;
 }
 
+/* Плавный скролл для всей страницы */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -23,7 +28,7 @@ body {
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 50px 20px;
+    padding: 40px 20px;
 }
 
 /* Навигация */
@@ -162,8 +167,9 @@ body {
 /* Портфолио */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 30px;
+    align-items: stretch; /* Карточки в одном ряду будут строго одной высоты */
 }
 
 .project-card {
@@ -172,6 +178,8 @@ body {
     border: 1px solid var(--border-color);
     overflow: hidden;
     transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -180,22 +188,57 @@ body {
 
 .project-info {
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Заставляет внутренний блок занимать 100% высоты карточки */
 }
 
+/* Выравнивание заголовков на один уровень */
 .project-info h3 {
-    margin-bottom: 10px;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    /* Задаем фиксированную высоту для заголовков (хватит на 2 строки), 
+       чтобы контент под ними начинался с одной линии */
+    min-height: 3.6rem; 
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Обертка для текста описания, которая заберет всё свободное пространство */
+.project-description {
+    flex-grow: 1;
+    margin-bottom: 20px;
 }
 
 .project-info p {
     color: #94a3b8;
-    margin-bottom: 20px;
     font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
 }
 
+/* Выравнивание блока "Стек" строго на один уровень */
+.project-tech {
+    border-top: 1px solid var(--border-color);
+    padding-top: 15px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+}
+
+/* Ссылка всегда прижата к самому низу */
 .project-link {
     color: var(--accent-color);
     text-decoration: none;
     font-weight: 500;
+    margin-top: auto; /* Push-эффект на дно карточки */
+    display: inline-block;
+    transition: opacity 0.2s;
+}
+
+.project-link:hover {
+    opacity: 0.8;
 }
 
 /* Новые стили для контактов без формы */
@@ -249,8 +292,86 @@ body {
     font-size: 0.9rem;
 }
 
-/* Мобильная адаптивность */
+/* Планшеты и небольшие ноутбуки (до 992px) */
+@media (max-width: 992px) {
+    .container {
+        padding: 60px 24px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.8rem;
+    }
+}
+
+/* Смартфоны (до 768px) */
 @media (max-width: 768px) {
-    .nav-links { display: none; } /* Для простоты скрываем меню на мобильных */
-    .hero-text h1 { font-size: 2.5rem; }
+    .container {
+        padding: 50px 20px;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 10px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+    }
+
+    .hero {
+        padding-top: 160px;
+        min-height: auto;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+
+    .hero-text p {
+        font-size: 1.1rem;
+        margin-bottom: 24px;
+    }
+
+    .skills-grid, .portfolio-grid {
+        gap: 20px;
+    }
+
+    .skill-card, .project-info {
+        padding: 20px; 
+    }
+
+    .project-info h3 {
+        min-height: auto;
+        margin-bottom: 10px;
+    }
+
+    .contact-list li {
+        font-size: 1.1rem;
+    }
+}
+
+/* Маленькие смартфоны (до 480px) */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.9rem;
+    }
+
+    .nav-links {
+        gap: 10px; /* Максимально компактное меню для узких экранов */
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+    }
 }

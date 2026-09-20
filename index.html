@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио Web-Разработчика</title>
+    <title>Портфолио Стенина Максима</title>
     <link rel="shortcut icon" type="image/x-icon" href="tag.ico">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -26,7 +26,7 @@
     <section class="hero container" id="about">
         <div class="hero-text">
             <h1>Привет, я <span class="highlight">Стенин Максим</span></h1>
-            <p>Разработчик. Создаю быстрые, надежные и современные веб-приложения. Специализируюсь на Java, JavaScript, PHP, Python и проектировании баз данных.</p>
+            <p>Backend разработчик. Создаю быстрые, надежные и современные веб-приложения. Специализируюсь на Java, JavaScript, PHP, Python и проектировании баз данных.</p>
             <a href="#contact" class="btn">Связаться со мной</a>
         </div>
     </section>
@@ -76,43 +76,78 @@
     <section class="portfolio container" id="portfolio">
         <h2 class="section-title">Выполненные проекты</h2>
         <div class="portfolio-grid">
+            
             <!-- Проект 1 -->
             <div class="project-card">
                 <div class="project-info">
-                    <h3>Полнофункциональная платформа «Доска объявлений»</h3>
-                    <p>Спроектировал и реализовал архитектуру приложения с нуля.
-                    Разработал и интегрировал систему чата между пользователями, обеспечив мгновенную доставку сообщений без перезагрузки страниц.</p>
-                    <p>Спроектировал гибкую систему фильтрации и поиска товаров.</p>
-                    <a href="https://doskaup.ru" class="project-link" target="_blank">Сайт →</a>
+                    <h3>REST API для Микросервисной Системы</h3>
+                    <div class="project-description">
+                        <p>Разработал масштабируемый бэкенд для WMS-системы (управление складом). Реализовал безопасную авторизацию на базе JWT-токенов и оптимизировал сложные SQL-запросы в PostgreSQL для повышения производительности.</p>
+                    </div>
+                    <div class="project-tech">
+                        <b>Стек:</b> Java, Spring Boot, Spring Security, PostgreSQL, Redis, Docker.
+                    </div>
+                    <a href="https://github.com/stenin-maxim/wms-backend/tree/dev" class="project-link" target="_blank">Исходный код на Git →</a>
                 </div>
             </div>
+
             <!-- Проект 2 -->
             <div class="project-card">
                 <div class="project-info">
-                    <h3>Экосистема умного дома (IoT)</h3>
-                    <p>Разработал решение для IoT-экосистемы: от проектирования серверной архитектуры до реализации кроссплатформенного мобильного приложения</p>
-                    <p>Спроектировал и внедрил систему real-time обмена данными между датчиками и интерфейсом пользователя на базе WebSockets и протокола MQTT.</p>
-                    <a href="https://github.com/stenin-maxim/Inteli/tree/dev" class="project-link" target="_blank">Смотреть Git →</a>
+                    <h3>Платформа «Доска объявлений»</h3>
+                    <div class="project-description">
+                        <p>Спроектировал и реализовал архитектуру приложения с нуля. Разработал и интегрировал систему чата между пользователями, обеспечив мгновенную доставку сообщений без перезагрузки страниц с помощью веб-сокетов.</p>
+                        <p>Спроектировал гибкую систему фильтрации и поиска товаров.</p>
+                    </div>
+                    <div class="project-tech">
+                        <b>Стек:</b> PHP (Laravel), Python (Playwright), TypeScript (React), WebSockets, MySQL, Redis, Redux Toolkit, RTK Query, Docker, Postman.
+                    </div>
+                    <a href="https://doskaup.ru" class="project-link" target="_blank">Открыть сайт →</a>
                 </div>
             </div>
+
             <!-- Проект 3 -->
             <div class="project-card">
                 <div class="project-info">
-                    <h3>Веб-платформа B2C</h3>
-                    <p>Разработал масштабируемый REST API, обеспечивший бесперебойную работу клиентского приложения.</p>
-                    <p>Спроектировал архитектуру БД с нуля, реализовав эффективную схему связей и систему индексов для работы с большими объемами данных.</p>
-                    <a href="https://bitbucket.org/stenin-maxim/love/src/dev/" class="project-link" target="_blank">Смотреть Git →</a>
+                    <h3>Экосистема умного дома (IoT)</h3>
+                    <div class="project-description">
+                        <p>Разработал комплексное решение для IoT-экосистемы: от проектирования серверной архитектуры до реализации кроссплатформенного приложения. Внедрил систему real-time обмена данными между датчиками и интерфейсом на базе WebSockets и MQTT.</p>
+                    </div>
+                    <div class="project-tech">
+                        <b>Стек:</b> TypeScript, C, Node.js, React, MQTT, WebSockets, Docker, Git, протоколы (ZigBee, Wi-Fi).
+                    </div>
+                    <a href="https://github.com/stenin-maxim/Inteli/tree/dev" class="project-link" target="_blank">Исходный код на Git →</a>
                 </div>
             </div>
+
             <!-- Проект 4 -->
             <div class="project-card">
                 <div class="project-info">
-                    <h3>CRM-система учета и логистики отходов</h3>
-                    <p>Разработка серверной части приложения.</p>
-                    <p>Реализовал серверную логику и систему разграничения прав доступа (RBAC) для типов контрагентов и сотрудников.</p>
-                    <a href="https://github.com/stenin-maxim/php/tree/dev" class="project-link" target="_blank">Смотреть Git →</a>
+                    <h3>Веб-платформа B2C</h3>
+                    <div class="project-description">
+                        <p>Разработал масштабируемый REST API, обеспечивший стабильную и бесперебойную работу клиентского приложения. Спроектировал архитектуру БД с нуля, реализовав эффективную схему связей и систему индексов для работы с большими объемами данных.</p>
+                    </div>
+                    <div class="project-tech">
+                        <b>Стек:</b> PHP, Laravel, MySQL, Redis, Nginx, Docker, JavaScript, Vue.
+                    </div>
+                    <a href="https://bitbucket.org/stenin-maxim/love/src/dev/" class="project-link" target="_blank">Исходный код на Git →</a>
                 </div>
             </div>
+
+            <!-- Проект 5 -->
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>CRM-система учета логистики отходов</h3>
+                    <div class="project-description">
+                        <p>Проектировал и разрабатывал серверную часть приложения. Реализовал бизнес-логику проекта и отказоустойчивую систему разграничения прав доступа (RBAC) для различных типов контрагентов и внутренних сотрудников компании.</p>
+                    </div>
+                    <div class="project-tech">
+                        <b>Стек:</b> PHP 8, Laravel, MySQL, Redis, Nginx.
+                    </div>
+                    <a href="https://github.com/stenin-maxim/php/tree/dev" class="project-link" target="_blank">Исходный код на Git →</a>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -124,11 +159,11 @@
             <ul class="contact-list">
                 <li>
                     <span class="icon">📱</span> Telegram: 
-                    <a href="https://t.me" target="_blank" class="contact-link-item">@stn_maxim</a>
+                    <a href="https://t.me" target="_blank" class="contact-link-item">&#64;stn_maxim</a>
                 </li>
                 <li>
                     <span class="icon">📧</span> Email: 
-                    <a href="mailto:blueeulb@yandex.ru" class="contact-link-item">blueeulb@yandex.ru</a>
+                    <a href="mailto:blueeulb&#64;yandex.ru" class="contact-link-item">blueeulb&#64;yandex.ru</a>
                 </li>
             </ul>
         </div>
