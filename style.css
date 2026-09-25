@@ -54,6 +54,11 @@ body {
     font-weight: 700;
     color: var(--accent-color);
     text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.logo .highlight {
+    color: var(--accent-color); 
 }
 
 .nav-links {
@@ -239,6 +244,20 @@ body {
 
 .project-link:hover {
     opacity: 0.8;
+}
+
+.project-links-wrapper {
+    margin-top: auto; /* Прижимает всю группу ссылок к низу карточки */
+    display: flex;
+    flex-wrap: wrap; /* Если на мобильном экране не хватит места, ссылки перенесутся */
+    gap: 15px; /* Расстояние между кнопкой гита и видео */
+    justify-content: space-between; /* Расставляет ссылки по краям */
+    align-items: center;
+}
+
+.video-link {
+    color: #38bdf8;
+    font-weight: 600;
 }
 
 /* Новые стили для контактов без формы */
