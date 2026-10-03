@@ -1,5 +1,6 @@
 {
     "ru": {
+        "logo": "Стенин <span class='highlight'>Максим</span>",
         "nav_about": "Обо мне",
         "nav_skills": "Навыки",
         "nav_portfolio": "Портфолио",
@@ -31,6 +32,7 @@
         "copyright": "&copy; 2026. Все права защищены."
     },
     "en": {
+        "logo": "Stenin <span class='highlight'>Maxim</span>",
         "nav_about": "About Me",
         "nav_skills": "Skills",
         "nav_portfolio": "Portfolio",
