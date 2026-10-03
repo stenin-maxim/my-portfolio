@@ -28,7 +28,7 @@ body {
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 35px 20px;
 }
 
 /* Навигация */
@@ -47,6 +47,41 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+}
+
+.lang-switch {
+    display: flex;
+    gap: 5px;
+    background-color: var(--card-bg);
+    padding: 4px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    color: #64748b;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+
+.lang-btn:hover {
+    color: var(--text-color);
+}
+
+.lang-btn.active {
+    background-color: var(--accent-color);
+    color: #0f172a;
+}
+
+/* Класс для скрытия текста на неактивном языке */
+.lang-hidden {
+    display: none !important;
 }
 
 .logo {
